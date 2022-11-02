@@ -19,7 +19,7 @@ function createRoom() {
     peer.on('open', (id) => {
         console.log("Peer Connected with ID: ", id)
         hideModal()
-        getUserMedia({ video: true, audio: false }, (stream) => {
+        getUserMedia({ video: true, audio: true }, (stream) => {
             local_stream = stream;
             setLocalStream(local_stream)
         }, (err) => {
