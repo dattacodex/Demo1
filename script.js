@@ -35,6 +35,11 @@ function createRoom() {
             setRemoteStream(stream)
             alert('A3')
         })
+        //-------------
+           call.on('close', ( ) => {
+              alert("")
+            })
+        //--------------
         currentPeer = call;
     })
 }
@@ -86,6 +91,11 @@ function joinRoom() {
             call.on('stream', (stream) => {
                 setRemoteStream(stream);
             })
+            //----------
+               call.on('close', ( ) => {
+              alert("")
+            })
+            //---------------
             currentPeer = call;
         }, (err) => {
             console.log(err)
