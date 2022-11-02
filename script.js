@@ -46,6 +46,7 @@ function setLocalStream(stream) {
 function setRemoteStream(stream) {
 
     let video = document.getElementById("remote-video");
+    video.muted = false;
     video.srcObject = stream;
     video.play();
 }
