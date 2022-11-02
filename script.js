@@ -28,12 +28,12 @@ function createRoom() {
         notify("Waiting for peer to join.")
     })
     peer.on('call', (call) => {
-           alert('A1')
+          
         call.answer(local_stream);
         call.on('stream', (stream) => {
-               alert('A2')
+             
             setRemoteStream(stream)
-            alert('A3')
+           
         })
         //-------------
            call.on('close', ( ) => {
