@@ -40,7 +40,7 @@ function setLocalStream(stream) {
 
     let video = document.getElementById("local-video");
     video.srcObject = stream;
-    video.muted = true;
+    video.muted = false;
     video.play();
 }
 function setRemoteStream(stream) {
